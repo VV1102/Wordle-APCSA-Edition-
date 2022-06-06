@@ -1,4 +1,6 @@
 import java.util.Scanner;
+import java.awt.*;
+import javax.swing.*;
 
 public class Game{
     private int count;
@@ -27,7 +29,6 @@ public class Game{
     public String analyzeUserInput(String answer){
         int count = 0;
         while(count<7){
-            //giant method start
             
             //method must be able to return inputted word in three different colors
             //method must scan each letter in user input and compare it to wordOfTheDay
@@ -37,6 +38,41 @@ public class Game{
             //method count up after each time the user input is evaluated.
             //if user input is not exactly 5 letters, count doesn't go up.  Instead method should print.  Try a word with 5 letters and repeat ask user method again.  Then analyze user input should be applied to that word.
             //count goes up if user input is exactly five letters but after it is decided which color each letter will be.
+                        
+            
+            //giant method start
+            
+       Scanner guess = new Scanner(System.in);
+       System.out.println("Enter a Five Letter Word:");
+       String answer = guess.nextLine();
+       System.out.println("You guessed" + answer);
+            
+       String[] userGuess = new String[];
+      
+                for(int i = 0; i < answer.length; i++){
+                   userGuess[i] = answer.substring(i);
+                }
+            
+            if(answer.equals(wordOfTheDay)){
+                System.out.println(ANSI_GREEN + answer + ANSI_RESET);
+                count++;
+            }
+            else{
+                   for(int j = 0; j < answer.length; j++){
+                       if(userGuess[i].equals(wordOfTheDay.substring(i))){
+                            System.out.print(ANSI_GREEN + userGuess[i] + ANSI_RESET);
+                       }
+                       else if(!userGuess[i].equals(wordOfTheDay.substring(i))){
+                            for(int k = j+1; k < answer.length; k++){
+                               //left off here
+                            }
+                       }
+                   }
+                }
+                
+                
+            
+            }
             
             //giant method end
         }

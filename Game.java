@@ -32,7 +32,7 @@ public class Game {
      
       
       if(answer.equals(wordOfTheDay)){
-          return "Yes, you guessed the word correct!";
+          return "Yes, you guessed the correct word!";
           guessCount++;
       }
        else if(answer.length() == wordOfTheDay.length() && answer.length() < 6){
@@ -48,17 +48,17 @@ public class Game {
            
            for(int k = 0; k<userGuess.length(); k++){
                if(userGuess[k] == actualWord[k]){
-                   return guess.substring(k) + "is at position" + (k+1);
+                   return guess.substring(k) + " is at position " + (k+1);
                    guessCount++;
                }
                else{
                    for(int l = k+1; l<actualWord.length(); l++){
                        if(userGuess[k] == actualWord[l]){
-                         return guess.substring(k) + "is in the word"; 
+                         return guess.substring(k) + " is in the word"; 
                          guessCount++;
                        }
                        else{
-                           return guess.substring(k) + "is not in the word";
+                           return guess.substring(k) + " is not in the word";
                            guessCount++;
                        }
                    }

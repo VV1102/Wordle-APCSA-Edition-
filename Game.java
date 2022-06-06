@@ -70,7 +70,7 @@ public class Game {
            
        } 
             if(guessCount>6){
-                return "Sorry.  You are out of tries.  The correct word was:" + wordOfTheDay;    
+                return "Sorry.  You are out of tries.  The correct word was: " + wordOfTheDay;    
             }
 }
 }

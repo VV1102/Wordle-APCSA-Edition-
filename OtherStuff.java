@@ -48,12 +48,14 @@ public class Game{
                 for(int i = 0; i < answer.length; i++){
                    userGuess[i] = answer.substring(i);
                 }
+           
+            if(answer.length() == 5){
             
             if(answer.equals(wordOfTheDay)){
                 System.out.println(ANSI_GREEN + answer + ANSI_RESET);
                 count++;
             }
-            else{
+             else{
                    for(int j = 0; j < answer.length; j++){
                        if(userGuess[i].equals(wordOfTheDay.substring(i))){
                             System.out.print(ANSI_GREEN + userGuess[i] + ANSI_RESET);
@@ -75,8 +77,18 @@ public class Game{
                           System.out.println(ANSI_RED + answer + ANSI_RESET);
                           count++; 
                        }
-                }
                 
+                 
+                  }
+             }
+                else{
+                    System.out.println("Please enter a word that is 5 letters in length");
+                    Scanner guess = new Scanner(System.in);
+                    System.out.println("Enter a Five Letter Word:");
+                    String answer = guess.nextLine();
+                    System.out.println("You guessed " + answer);
+                    count == count;
+       }
                 
             
             }
@@ -86,6 +98,8 @@ public class Game{
         
         System.out.println("Whoops sorry!  You are out of tries.  Try again tomorrow.");
         System.out.println("The correct word was: " + wordOfTheDay);
+            
+       }
         
     }
 }

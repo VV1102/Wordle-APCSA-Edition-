@@ -6,9 +6,8 @@ public class Game{
     private int count;
     private String wordOfTheDay;
     
-    public Game(int count, String wordOfTheDay){
-        this.count = count;
-        this.wordOfTheDay = wordOfTheDay;
+    public Game(){
+        //empty constructor
     }
     
     public int getCount(){

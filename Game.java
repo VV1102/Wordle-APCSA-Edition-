@@ -42,7 +42,7 @@ public class Game{
        String answer = guess.nextLine();
        System.out.println("You guessed " + answer);
             
-       String[] userGuess = new String[];
+       String[] userGuess = new String[5];
       
                 for(int i = 0; i < answer.length; i++){
                    userGuess[i] = answer.substring(i);
@@ -80,17 +80,19 @@ public class Game{
                  
                   }
              }
-                else{
+                
+                
+            
+            }
+            
+            else{
                     System.out.println("Please enter a word that is 5 letters in length");
                     Scanner guess = new Scanner(System.in);
                     System.out.println("Enter a Five Letter Word:");
                     String answer = guess.nextLine();
                     System.out.println("You guessed " + answer);
-                    count == count;
+                    count = count;
        }
-                
-            
-            }
             
             //giant method end
         }
@@ -101,4 +103,3 @@ public class Game{
        }
         
     }
-}

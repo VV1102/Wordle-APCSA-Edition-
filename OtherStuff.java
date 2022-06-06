@@ -19,15 +19,11 @@ public class Game{
         return wordOfTheDay;
     }
     
-    public void askUser(){
-       Scanner guess = new Scanner(System.in);
-       System.out.println("Enter a Five Letter Word:");
-       String answer = guess.nextLine();
-       System.out.println("You guessed" + answer);
-    }
     
     public String analyzeUserInput(String answer){
         int count = 0;
+        String wordOfTheDay = "house";
+        
         while(count<7){
             
             //method must be able to return inputted word in three different colors
@@ -45,7 +41,7 @@ public class Game{
        Scanner guess = new Scanner(System.in);
        System.out.println("Enter a Five Letter Word:");
        String answer = guess.nextLine();
-       System.out.println("You guessed" + answer);
+       System.out.println("You guessed " + answer);
             
        String[] userGuess = new String[];
       
@@ -61,13 +57,24 @@ public class Game{
                    for(int j = 0; j < answer.length; j++){
                        if(userGuess[i].equals(wordOfTheDay.substring(i))){
                             System.out.print(ANSI_GREEN + userGuess[i] + ANSI_RESET);
+                           count++;
                        }
                        else if(!userGuess[i].equals(wordOfTheDay.substring(i))){
                             for(int k = j+1; k < answer.length; k++){
-                               //left off here
+                               if(userGuess[i].equals(wordOfTheDay.substring(k))){
+                                   System.out.print(ANSI_YELLOW + userGuess[i] + ANSI_RESET);
+                                   count++;
+                               }
+                               else{
+                                   System.out.print(ANSI_RED + userGuess[i] + ANSI_RESET);
+                                   count++;
+                               }
                             }
                        }
-                   }
+                       else{
+                          System.out.println(ANSI_RED + answer + ANSI_RESET);
+                          count++; 
+                       }
                 }
                 
                 
@@ -76,6 +83,10 @@ public class Game{
             
             //giant method end
         }
+        
+        System.out.println("Whoops sorry!  You are out of tries.  Try again tomorrow.");
+        System.out.println("The correct word was: " + wordOfTheDay);
+        
     }
 }
 

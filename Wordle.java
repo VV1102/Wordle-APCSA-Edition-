@@ -9,10 +9,15 @@ public class Wordle
       int maxtries = 6;
       
       System.out.println("************** WORDLE GAME **************");
-      System.out.println("---Rules---");
-     // System.out.println("Should be 5 lettered word; case sensitive; next to a letter means that the letter is in the word and in the correct position, # means that the letter");
-     // System.out.println("is in the word but the wrong position, ! means that the letter is not in the word.");
-     // System.out.println();
+      System.out.println("    -------- Rules to play --------");
+      System.out.println(" --> Should be 5 lettered word.");
+      System.out.println(" --> Please enter in all lowercase letters.");
+      System.out.println(" --> An asterik * next to a letter means the letter");
+      System.out.println("     is in the word and in the correct position,");
+      System.out.println(" --> A hashtag # means the letter is in the word");
+      System.out.println("     but the wrong position,");
+      System.out.println(" --> An exclamation point ! means the letter is");
+      System.out.println("     not in the word.");
       
     Game wordle1 = new Game();
     while (count < maxtries){
@@ -30,7 +35,7 @@ public class Wordle
                     totalStars=totalStars+1;
             }
             //System.out.println("totalStars = "+totalStars);
-            if(totalStars==5){
+            if(totalStars==(wordle1.getWordOfTheDay().length())){
                 System.out.println("You WON by guessing the right WORD : "+ wordle1.getWordOfTheDay()); 
                 break;
             }else{

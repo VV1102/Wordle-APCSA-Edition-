@@ -1,7 +1,8 @@
 import java.util.Scanner;
 
+
 public class Game{
-    private String wordOfTheDay = "games";
+    private String wordOfTheDay = "house";
     private int maxWordSize = 5;
 
     public Game(){
@@ -23,10 +24,10 @@ public class Game{
     }
    
     public String analyzeUserInput(){
-       System.out.println("Enter a Five Letter Word:");
+       System.out.print("Enter a Word:");
        Scanner guess = new Scanner(System.in);
        String userGuess = guess.nextLine();
-       System.out.println("You entered Five Lettered Word : "+ userGuess);
+       System.out.println("Your Entered Word : "+ userGuess);
       
        String output = ""; 
        
@@ -52,4 +53,4 @@ public class Game{
         
     }// end of analyzeUserInput
     
-}// end of Game 
+}// end of Game

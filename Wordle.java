@@ -18,6 +18,9 @@ public class Wordle
       System.out.println("     but the wrong position,");
       System.out.println(" --> An exclamation point ! means the letter is");
       System.out.println("     not in the word.");
+      System.out.println(" --> NOTE: Please enter real words.  This program");
+      System.out.println("           is not meant to detect whether a word");
+      System.out.println("           exists or not.");
       
     Game wordle1 = new Game();
     while (count < maxtries){
